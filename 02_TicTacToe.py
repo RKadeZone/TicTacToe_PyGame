@@ -14,6 +14,10 @@ python tic_tac_toe.py
 
 Functions:
 - draw_board: Draws the Tic-Tac-Toe board on the game window.
+- handle_input: Handles player input for QUIT and MOUSEBUTTONDOWN.
+- make_move: Checks for valid move and updates board contents on sucessful move.
+- draw_X: Draws an 'X' in the center position of associated grid.
+- draw_O: Draws an 'O' in the center position of associated grid.
 
 Note:
 This script requires PyGame to be installed. You can install it using pip:
@@ -123,12 +127,9 @@ def handle_input():
             # Determine which cell the player has clicked on
             row = mouse_pos[0] // CELL_SIZE
             col = mouse_pos[1] // CELL_SIZE  
-               
             
             # Make the move on the board
             make_move(row, col)
-
-
 
 # create a function to check for a winner or a tie
 def check_winner():
