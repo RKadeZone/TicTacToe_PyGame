@@ -163,7 +163,8 @@ def check_winner():
 game_over = False
 while running:
     # Handle events
-    handle_input()
+    if not game_over:
+        handle_input()
 
     # Update game logic
     if not game_over:
